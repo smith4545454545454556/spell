@@ -87,7 +87,7 @@ const NavBar = (props) => {
                 </div>
 
                 <div className=" px-6 ">
-                    {filteredFav.length > 0 ? (
+                    {filteredFav !== null && filteredFav.length > 0 ? (
                         <ul className=" flex flex-col gap-4 z-0">
                             {filteredFav.map((spell) => {
                                 return (
