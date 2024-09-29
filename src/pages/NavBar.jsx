@@ -58,7 +58,7 @@ const NavBar = (props) => {
                         >
                             <FaRegHeart />
                         </button>
-                        {favorites.length > 0 ? (
+                        {favorites && favorites.length > 0 ? (
                             <>
                                 <p className="flex items-center justify-center text-white absolute -bottom-1 -right-2 bg-blue-500 rounded-full h-5 w-5">
                                     {favorites.length}
@@ -87,7 +87,7 @@ const NavBar = (props) => {
                 </div>
 
                 <div className=" px-6 ">
-                    {filteredFav !== null && filteredFav.length > 0 ? (
+                    {favorites && favorites.length > 0 ? (
                         <ul className=" flex flex-col gap-4 z-0">
                             {filteredFav.map((spell) => {
                                 return (
