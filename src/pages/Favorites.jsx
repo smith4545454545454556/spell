@@ -10,7 +10,7 @@ const Favorites = (props) => {
     return (
         <div className=" px-24">
             <h3 className=" text-2xl mb-2">Favourites</h3>
-            {filteredFav !== null && filteredFav.length > 0 ? (
+            {filteredFav && filteredFav.length > 0 ? (
                 <ul className=" grid grid-cols-4 gap-4 z-0">
                     {filteredFav.map((spell) => {
                         return (
@@ -28,7 +28,7 @@ const Favorites = (props) => {
                                             }}
                                             className=" absolute right-4 top-4 text-[20px]"
                                         >
-                                            {favorites.includes(spell.index) ? (
+                                            {favorites && favorites.includes(spell.index) ? (
                                                 <FaHeart className=" text-red-600" />
                                             ) : (
                                                 <FaRegHeart className=" hover:text-red-600" />
