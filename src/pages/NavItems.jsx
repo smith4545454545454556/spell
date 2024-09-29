@@ -34,7 +34,7 @@ const NavItems = (props) => {
                 className={clsx(
                     "",
                     matchPath(navData.href, url.pathname)
-                        ? "bg-black/15 h-full"
+                        ? " h-full"
                         : ""
                 )}
                 ref={navRef}

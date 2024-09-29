@@ -20,7 +20,7 @@ const NavBar = (props) => {
 
     return (
         <div>
-            <div className=" flex justify-between shadow-md  h-20 px-24 items-center mb-16  bg-transparent relative">
+            <div className="font-custom  flex justify-between shadow-md  h-20 px-24 items-center mb-16  bg-transparent relative">
                 <Link to={"/"}>
                     <img
                         src="/img/spellLogo.png"
@@ -33,7 +33,7 @@ const NavBar = (props) => {
                         {navDatas.map((navData) => {
                             return (
                                 <>
-                                    <li className=" text-[23px] px-2 mr-2">
+                                    <li className=" text-[18px] px-2 mr-2">
                                         <NavItems
                                             setIndicatorBounds={
                                                 setIndicatorBounds
