@@ -89,7 +89,7 @@ const NavBar = (props) => {
                 <div className=" px-6 ">
                     {favorites && favorites.length > 0 ? (
                         <ul className=" flex flex-col gap-4 z-0">
-                            {filteredFav.map((spell) => {
+                            {filteredFav?.map((spell) => {
                                 return (
                                     <>
                                         <div className=" bg-white p-3 shadow-md  rounded-lg  flex  flex-col items-start relative">
