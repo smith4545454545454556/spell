@@ -35,7 +35,7 @@ const Spells = (props) => {
                     All Spells
                 </h3>
 
-                {loading ? (
+                {/* {loading ? (
                     <>
                         <ul className="grid grid-cols-4 gap-4 z-0">
                             {Array(50)
@@ -50,45 +50,45 @@ const Spells = (props) => {
                                 })}
                         </ul>
                     </>
-                ) : (
-                    <ul className=" grid grid-cols-4 gap-4 z-0">
-                        {spells?.map((spell) => {
-                            return (
-                                <>
-                                    <div className=" bg-white shadow-sm  rounded-lg p-4 cursor-pointer flex  flex-col items-start relative">
-                                        <div className=" flex ">
-                                            <li className=" text-[20px]">
-                                                <Link to={`${spell.index}`}>
-                                                    {spell.name}
-                                                </Link>
-                                            </li>
-                                            <div
-                                                onClick={() => {
-                                                    toggleFavorite(spell.index);
-                                                }}
-                                                className=" absolute right-4 top-4 text-[20px]"
-                                            >
-                                                {favorites.includes(
-                                                    spell.index
-                                                ) ? (
-                                                    <FaHeart className=" text-red-600" />
-                                                ) : (
-                                                    <FaRegHeart className=" hover:text-red-600" />
-                                                )}
-                                            </div>
+                ) : ( */}
+                <ul className=" grid grid-cols-4 gap-4 z-0">
+                    {spells?.map((spell) => {
+                        return (
+                            <>
+                                <div className=" bg-white shadow-sm  rounded-lg p-4 cursor-pointer flex  flex-col items-start relative">
+                                    <div className=" flex ">
+                                        <li className=" text-[20px]">
+                                            <Link to={`${spell.index}`}>
+                                                {spell.name}
+                                            </Link>
+                                        </li>
+                                        <div
+                                            onClick={() => {
+                                                toggleFavorite(spell.index);
+                                            }}
+                                            className=" absolute right-4 top-4 text-[20px]"
+                                        >
+                                            {favorites.includes(
+                                                spell.index
+                                            ) ? (
+                                                <FaHeart className=" text-red-600" />
+                                            ) : (
+                                                <FaRegHeart className=" hover:text-red-600" />
+                                            )}
                                         </div>
-                                        <p>
-                                            <span className=" text-gray-500">
-                                                Level:
-                                            </span>
-                                            {spell.level}
-                                        </p>
                                     </div>
-                                </>
-                            );
-                        })}
-                    </ul>
-                )}
+                                    <p>
+                                        <span className=" text-gray-500">
+                                            Level:
+                                        </span>
+                                        {spell.level}
+                                    </p>
+                                </div>
+                            </>
+                        );
+                    })}
+                </ul>
+                {/* )} */}
             </div>
         </>
     );
