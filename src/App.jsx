@@ -13,7 +13,7 @@ export const appContext = createContext();
 function App() {
     const [favorites, setFavorites] = useState([]);
     const [spells, setSpells] = useState([]);
-    const filteredFav = spells.filter((f) => favorites.includes(f.index));
+    const filteredFav = spells.filter((f) => favorites?.includes(f.index));
 
 
     const toggleFavorite = (favId) => {

@@ -109,7 +109,7 @@ const NavBar = (props) => {
                                                     }}
                                                     className=" absolute right-4 top-4 text-[20px]"
                                                 >
-                                                    {favorites.includes(
+                                                    {favorites?.includes(
                                                         spell.index
                                                     ) ? (
                                                         <FaHeart className=" text-red-600" />

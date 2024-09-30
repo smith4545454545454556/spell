@@ -28,7 +28,7 @@ const Favorites = (props) => {
                                             }}
                                             className=" absolute right-4 top-4 text-[20px]"
                                         >
-                                            {favorites && favorites.includes(spell.index) ? (
+                                            {favorites && favorites?.includes(spell.index) ? (
                                                 <FaHeart className=" text-red-600" />
                                             ) : (
                                                 <FaRegHeart className=" hover:text-red-600" />
