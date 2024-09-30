@@ -37,24 +37,22 @@ const Spells = (props) => {
 
                 {loading ? (
                     <>
-                        <ul className=" grid grid-cols-4 gap-4 z-0">
+                        <ul className="grid grid-cols-4 gap-4 z-0">
                             {Array(50)
                                 .fill(null)
-                                .map((skele) => {
+                                .map((_, index) => {
                                     return (
-                                        <>
-                                            <div className="bg-white p-4 cursor-pointer flex  flex-col items-start">
-                                                <div className=" bg-slate-300 h-8 w-40 rounded-lg mb-3"></div>
-                                                <div className=" bg-slate-300 h-8 w-20 rounded-lg"></div>
-                                            </div>
-                                        </>
+                                        <li key={index} className="bg-white p-4 cursor-pointer flex flex-col items-start">
+                                            <div className="bg-slate-300 h-8 w-40 rounded-lg mb-3"></div>
+                                            <div className="bg-slate-300 h-8 w-20 rounded-lg"></div>
+                                        </li>
                                     );
                                 })}
                         </ul>
                     </>
                 ) : (
                     <ul className=" grid grid-cols-4 gap-4 z-0">
-                        {spells.map((spell) => {
+                        {spells?.map((spell) => {
                             return (
                                 <>
                                     <div className=" bg-white shadow-sm  rounded-lg p-4 cursor-pointer flex  flex-col items-start relative">
