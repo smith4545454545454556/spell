@@ -12,7 +12,7 @@ const Favorites = (props) => {
             <h3 className=" text-2xl mb-2">Favourites</h3>
             {filteredFav && filteredFav.length > 0 ? (
                 <ul className=" grid grid-cols-4 gap-4 z-0">
-                    {filteredFav.map((spell) => {
+                    {filteredFav?.map((spell) => {
                         return (
                             <>
                                 <div className=" bg-white  shadow-md  rounded-lg p-4 cursor-pointer flex  flex-col items-start relative">
